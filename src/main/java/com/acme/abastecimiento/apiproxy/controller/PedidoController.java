@@ -18,6 +18,12 @@ public class PedidoController {
         this.pedidoService = pedidoService;
     }
 
+    /**
+     * Endpoint: POST http://localhost:8080/api/pedidos/enviar
+     *
+     * @param request El cuerpo de la petición JSON, mapeado a PedidoRequestJson.
+     * @return ResponseEntity conteniendo PedidoResponseJson y el estado HTTP.
+     */
     @PostMapping("/enviar")
     public ResponseEntity<PedidoResponseJson> enviarPedido(@RequestBody PedidoRequestJson request) {
         PedidoResponseJson response = pedidoService.procesarPedido(request);

@@ -17,6 +17,13 @@ public class PedidoService {
         this.soapResponseParser = soapResponseParser;
     }
 
+    /**
+     * Procesa la solicitud de pedido recibida, transformándola, simulando
+     * la comunicación SOAP y retornando la respuesta transformada.
+     *
+     * @param jsonRequest La solicitud de pedido en formato JSON.
+     * @return La respuesta del pedido en formato JSON.
+     */
     public PedidoResponseJson procesarPedido(PedidoRequestJson jsonRequest) {
         String xmlRequestString;
         try {
